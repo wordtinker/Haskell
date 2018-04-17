@@ -2,8 +2,7 @@ doubleMe x = x + x
 doubleUs x y = doubleMe x + doubleMe y
 doubleSmallNumber x = if x > 100  
                          then x  
-                         else x*2 
--- let keyword defines a name in GHCI
+                         else x*2
 combineLists x y = x ++ y -- O(n) works for any list, string are lists of chars
 prependList x y = x:y -- O(1) cons operator
 atPos x y = x !! y -- returns element at position,0 based
