@@ -23,6 +23,7 @@ greetIfCool coolness =
 -- Bool
 -- Char
 -- Tuple
+-- () is an empty tuple
 aTuple = (,) 8 'a'
 anotherTuple = (10, "string")
 firstAndSecond t = (fst t, snd t) -- first and last element of tuple
