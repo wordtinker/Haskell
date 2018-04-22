@@ -19,3 +19,6 @@ f (a, b) (c, d) = ((b, d), (a, c)) -- matches tuples
 third3 :: (a, b, c) -> c
 third3 (_, _, x) = x
 
+capital :: String -> String
+capital "" = "Empty string, whoops!"  
+capital all@(x:xs) = "The first letter of " ++ all ++ " is " ++ [x] -- @ alias
