@@ -19,4 +19,14 @@ instance Functor Maybe where
     fmap f Nothing = Nothing
 
 -- . b = (fmap.fmap) (++ "lol") (Just ["Hi,", "Hello"])
--- fmap can be composed for deeper lever of access 
+-- fmap can be composed for deeper lever of access
+getInt :: IO Int
+getInt = fmap read getLine
+
+bumpIt :: IO Int
+bumpIt = do
+  intVal <- getInt
+  return (intVal + 1)
+  
+bumpIt2 = fmap (+1) getInt -- same
+bumpIt3 = (+1) <$> getInt -- same
